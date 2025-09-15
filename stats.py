@@ -20,3 +20,20 @@ def count_the_number_of_char(text):
                 res[j] += 1
 
     return res
+
+
+def sort_on(items):
+    return items["num"]
+
+
+def get_sorted_list(char_dict):
+    lst = []
+
+    for i in char_dict:
+        r = {"char": i, "num": char_dict[i]}
+
+        lst.append(r)
+
+    lst.sort(reverse=True, key=sort_on)
+
+    return lst
